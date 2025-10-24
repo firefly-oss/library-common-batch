@@ -1,0 +1,4 @@
+com.firefly.common.batch.autoconfig.BatchAutoConfiguration
+com.firefly.common.batch.autoconfig.FlywayBatchAuditAutoConfiguration
+com.firefly.common.batch.autoconfig.FlywayShedLockAutoConfiguration
+com.firefly.common.batch.autoconfig.R2dbcLockProviderAutoConfiguration
