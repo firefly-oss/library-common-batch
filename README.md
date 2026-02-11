@@ -1,4 +1,4 @@
-# lib-common-batch
+# library-common-batch
 
 Utility library for scheduling and running batch jobs in Spring Boot microservices, featuring:
 - Automatic job discovery and registration via annotations
@@ -58,7 +58,7 @@ Utility library for scheduling and running batch jobs in Spring Boot microservic
 ```xml
 <dependency>
   <groupId>com.firefly</groupId>
-  <artifactId>lib-common-batch</artifactId>
+  <artifactId>library-common-batch</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 </dependency>
 ```
@@ -164,7 +164,7 @@ The library will attempt to acquire a distributed lock before running each job i
 - Configurable durations `at-most-for` and `at-least-for` are used.
 
 ### ShedLock setup
-By default, lib-common-batch auto-configures a ShedLock `LockProvider` using R2DBC when:
+By default, library-common-batch auto-configures a ShedLock `LockProvider` using R2DBC when:
 - `firefly.batch.lock.enabled=true` (default)
 - an `io.r2dbc.spi.ConnectionFactory` bean exists
 - the ShedLock R2DBC provider is on the classpath (this library brings it transitively)
@@ -295,7 +295,7 @@ firefly:
 
 ## Using it from external microservices
 ### Minimum steps
-1. Add the `com.firefly:lib-common-batch` dependency to your project.
+1. Add the `com.firefly:library-common-batch` dependency to your project.
 2. Define one or more beans that implement `BatchJob` and annotate them with `@ScheduledBatch`.
 3. (Optional) Enable persistent auditing with R2DBC if you need database traceability.
 4. (Optional) Override the default `LockProvider` if you prefer a different provider (e.g., JDBC). By default, an R2DBC `LockProvider` is auto-configured when a `ConnectionFactory` exists.

@@ -1,4 +1,4 @@
--- Library-provided migration to create the audit table used by lib-common-batch
+-- Library-provided migration to create the audit table used by library-common-batch
 -- Apply only if you enable `firefly.batch.audit.create-table=true`
 
 CREATE TABLE IF NOT EXISTS batch_audit (
