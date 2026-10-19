@@ -44,6 +44,12 @@
             <artifactId>flyway-core</artifactId>
             <optional>true</optional>
         </dependency>
+        <!-- Boot 4: Flyway auto-config moved out of spring-boot-autoconfigure -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-flyway</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>net.javacrumbs.shedlock</groupId>
             <artifactId>shedlock-core</artifactId>
