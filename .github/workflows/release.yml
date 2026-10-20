@@ -13,4 +13,5 @@ jobs:
       packages: write
     with:
       java-version: '25'
+      destination: both
     secrets: inherit
