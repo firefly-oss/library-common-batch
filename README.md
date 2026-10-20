@@ -70,7 +70,7 @@ Utility library for scheduling and running batch jobs in Spring Boot microservic
 ### Maven
 ```xml
 <dependency>
-  <groupId>com.firefly</groupId>
+  <groupId>io.fireflysoftware</groupId>
   <artifactId>library-common-batch</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 </dependency>
@@ -212,8 +212,8 @@ It includes `V1__create_shedlock_table.sql` to create the `shedlock` table compa
 ### Simple job
 ```java
 import org.springframework.stereotype.Component;
-import com.firefly.common.batch.api.BatchJob;
-import com.firefly.common.batch.api.ScheduledBatch;
+import io.fireflysoftware.common.batch.api.BatchJob;
+import io.fireflysoftware.common.batch.api.ScheduledBatch;
 
 @Component
 @ScheduledBatch(
@@ -308,7 +308,7 @@ firefly:
 
 ## Using it from external microservices
 ### Minimum steps
-1. Add the `com.firefly:library-common-batch` dependency to your project.
+1. Add the `io.fireflysoftware:library-common-batch` dependency to your project.
 2. Define one or more beans that implement `BatchJob` and annotate them with `@ScheduledBatch`.
 3. (Optional) Enable persistent auditing with R2DBC if you need database traceability.
 4. (Optional) Override the default `LockProvider` if you prefer a different provider (e.g., JDBC). By default, an R2DBC `LockProvider` is auto-configured when a `ConnectionFactory` exists.
